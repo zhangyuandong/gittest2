@@ -49,7 +49,7 @@ public class CaptureActivity extends Activity implements Callback
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		// ³õÊ¼»¯ CameraManager
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ CameraManager
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
 		hasSurface = false;
@@ -178,14 +178,14 @@ public class CaptureActivity extends Activity implements Callback
 			Drawable drawable = new BitmapDrawable(barcode);
 			dialog.setIcon(drawable);
 		}
-		dialog.setTitle("É¨Ãè½á¹û");
+		dialog.setTitle("É¨ï¿½ï¿½ï¿½ï¿½");
 		dialog.setMessage(obj.getText());
-		dialog.setNegativeButton("È·¶¨", new DialogInterface.OnClickListener()
+		dialog.setNegativeButton("È·ï¿½ï¿½", new DialogInterface.OnClickListener()
 		{
 			@Override
 			public void onClick(DialogInterface dialog, int which)
 			{
-				//ÓÃÄ¬ÈÏä¯ÀÀÆ÷´ò¿ªÉ¨ÃèµÃµ½µÄµØÖ·
+				//ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½Ãµï¿½ï¿½Äµï¿½Ö·
 				Intent intent = new Intent();
 				intent.setAction("android.intent.action.VIEW");
 				Uri content_url = Uri.parse(obj.getText());
@@ -194,7 +194,7 @@ public class CaptureActivity extends Activity implements Callback
 				finish();
 			}
 		});
-		dialog.setPositiveButton("È¡Ïû", new DialogInterface.OnClickListener()
+		dialog.setPositiveButton("È¡ï¿½ï¿½", new DialogInterface.OnClickListener()
 		{
 			@Override
 			public void onClick(DialogInterface dialog, int which)
@@ -255,7 +255,7 @@ public class CaptureActivity extends Activity implements Callback
 		public void onCompletion(MediaPlayer mediaPlayer)
 		{
 			mediaPlayer.seekTo(0);
-			systom.out.println("");
+			System.out.println("just look look !");
 		}
 	};
 
