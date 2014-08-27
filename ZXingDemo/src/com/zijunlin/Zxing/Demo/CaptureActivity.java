@@ -255,6 +255,7 @@ public class CaptureActivity extends Activity implements Callback
 		public void onCompletion(MediaPlayer mediaPlayer)
 		{
 			mediaPlayer.seekTo(0);
+			systom.out.println("");
 		}
 	};
 
